@@ -508,7 +508,6 @@ header .social-media {
     background: #0a0a0f;
   }
   main #home .intro-img {
-    border: 1px solid #fff;
     height: clamp(150px, 100%, 250px);
     display: flex;
     align-items: start;
@@ -517,9 +516,6 @@ header .social-media {
   main #home .intro-img img {
     display: block;
     width: clamp(150px, 100%, 280px);
-  }
-  main #home .intro {
-    border: 1px solid #fff;
   }
   main #home .intro .social-media {
     bottom: 0;
