@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap');
+$bkc: #0a0a0f;
+// $bkc: #16181d;
+// $pri-col: #a23eff;
+$pri-col: #1b74e4;
+$text-grey: #a4a7ab;
+$white: #d6d6dc;
+$black: #000;
+$real-white: #fff;
+$box-col: #16161d;
+
+@mixin flex($align, $justify, $column: row) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $column;
+}
+@mixin button {
+  width: 180px;
+  height: 45px;
+  background-color: $pri-col;
+  text-align: center;
+  letter-spacing: 2px;
+  color: $real-white;
+  border-radius: 7px;
+  transition: .5s linear;
+  border: 1px solid $white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: .5s;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+  scroll-padding-block: 50px;
+  overflow-x: hidden;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Klee One';
+  list-style: none;
+  text-decoration: none;
+  color: $real-white;
+}
+::selection{
+  background-color: rgb(231, 24, 231);
+  color: $white;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #56556d ;
+  transition: 1s;
+  &:hover{
+    background-color: rgb(32, 28, 28) ;
+  }
+}
+::-webkit-scrollbar-thumb {
+  background: #3b3a4a;
+  border-radius: 5px;
+}
+button {
+  @include button();
+}  
+a,span {
+  display: inline-block;
+}
+
+body {
+  background-color: $bkc;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  @include flex(center, space-between, row);
+  padding-inline: 50px;
+  position: fixed;
+  z-index: 99999;
+
+  .hamburger,
+  .overlay,
+  .logo-2,
+  .social-media {display: none;}
+
+  .logo a {
+    font-size: 5rem;
+    font-family: 'Tangerine', sans-serif;
+    transition: .5s linear;
+    color: $pri-col;
+  }
+
+  nav ul {
+    @include flex(center, center, row);
+    a {
+      padding: 5px;
+      margin: 5px;
+      font-size: 1.6rem;
+      border-bottom: 2px solid transparent;
+      transition: .5s;
+      color: $pri-col;
+
+
+      &:hover{
+        border-color: $pri-col;
+      }
+    }
+  }
+  
+  &.active {
+    background-color: $pri-col;
+    box-shadow: 0 0 10px rgba(black, .5);
+    padding-inline: 100px;
+    transition: .5s linear;
+    border-bottom: 1px solid white;
+    height: 50px;
+
+    .logo a {
+      color: $real-white;
+      font-size: 4rem;
+    }
+    nav ul a {
+      color: $real-white;
+      &:hover{
+        border-color: $white;
+      }
+    }
+  }
+}
+
+main {
+  #home {
+    background: url(../images/home-bg.jpg) no-repeat center center/ cover;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 50px;
+    position: relative;
+
+    .intro-img{
+      img {
+        display: none;
+      }
+    }
+    button {
+      @include button();
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    .intro {
+      place-self: center;
+
+      h1 {
+        font-size: 5rem;
+        color: white;
+        font-weight: 200;
+        margin: 5px;
+        span {
+          color: $pri-col;
+          font-family: 'tangerine', sans-serif;
+          font-size: 6rem;
+        }
+      }
+
+      h3 {
+        color: $real-white;
+        font-size: 2.5rem;
+        font-weight: 200;
+        margin: 5px;
+      }
+
+      p {
+        font-size: 1.5rem;
+        color: $white;
+        line-height: 1.5;
+        margin: 5px 5px 15px 5px;
+      }
+
+      .social-media {
+        position: absolute;
+        left: 50px;
+        bottom: 50px;
+
+        a {
+          margin: 5px;
+          color: $white;
+          line-height: 1.2;
+          span{transition: .5s;}
+          &:hover {
+            i{color: $text-grey;}
+            span{color: $pri-col;}
+          }
+        }
+
+        a i {
+          font-size: 2.5rem;
+          color: $pri-col;
+          padding-right: 5px;
+          transition: .5s;
+        }
+      }
+    }
+  }
+
+  #about {
+    margin-top: 40px;
+    .my-intro {
+      text-align: center;
+      h3 {
+        color: $pri-col;
+        font-size: 4rem;
+        font-family: 'Tangerine', sans-serif;
+        margin: 10px;
+        margin-bottom: 4px;
+        font-weight: 700;
+      }
+
+      h2 {
+        font-size: 3rem;
+        font-weight: 100;
+      }
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      height: 70vh;
+      gap: 20px;
+      margin-top: 30px;
+      
+      .img-container {
+        height: 70vh;
+
+        img {
+          height: 100%;
+          border-radius: 10px;
+        }
+      }
+      .text-content {
+        // background-color: #8491a1;
+        position: relative;
+        h3 {
+          font-size: 2.5rem;
+          font-weight: 100;
+          margin-bottom: 15px;
+          span {
+            font-family: 'tangerine', cursive;
+            color: $pri-col;
+            font-size: 4rem;
+            font-weight: 700;
+          }
+        }
+
+        .about-me-paragraph {
+          font-size: 1.6rem;
+          line-height: 1.5;
+          color: $white;
+          margin-bottom: 60px;
+        }
+
+        .work-content {
+          @include flex(center, space-between, row);
+          height: 150px;
+
+          .container {
+            background-color: $box-col;
+            height: 100%;
+            aspect-ratio: 1;
+            border-radius: 10px;
+            border: 1px solid #1b74e4;
+            @include flex(center, space-between, column);
+            padding: 15px;
+            transition: .5s linear;
+            span:nth-child(2) {
+              font-size: 1.8rem;
+            }
+            p {
+              font-size: 1.6rem;
+            } 
+            &:hover {
+              box-shadow: -3px -3px 5px rgba($white, .3), 3px 3px 5px rgba($black, .5), 1px 1px 35px rgba($white, .2);
+            }
+          }
+        }
+
+        button {
+          // margin-top: 62px;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+section {
+  min-height: 100vh;
+  max-width: 100%;
+  padding-inline: 40px;
+}
+
+#contact {
+  background-color: #1b74e4;
+}
+@media (max-width: 1180px) {
+  main {
+    #about {
+      .content {
+        height: 65vh;
+        .img-container {
+          height: 65vh;
+        }
+        .text-content {
+          @include flex(null, space-between, column);
+          gap: 5px;
+          height: 65vh;
+          h3 {
+            font-size: clamp(1.2rem, 100vh, 2rem);
+            margin-bottom: 3px;
+            span {font-size: clamp(1.2rem, 100vh, 3rem)}
+            justify-self: self-end;
+          }
+          .about-me-paragraph{
+            margin-bottom: 5px;
+            font-size: 1.5rem;
+            text-align: left;
+          }
+          .work-content {
+            height: clamp(50px, 100vh, 120px);
+            .container {
+              span:nth-child(2) {
+                font-size: 1.2rem;
+              }
+              p {
+                font-size: 1rem;
+              }
+            }
+          }
+          button{
+            position: relative;
+            margin-top: 0px;
+            // margin-top: auto;
+          }
+        }
+      }
+    }
+  }
+  lord-icon {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+
+@media (max-width: 900px) {
+  header {
+    @include flex(center, space-between);
+    padding-inline: 20px !important;
+  
+    .hamburger,
+    .overlay,
+    .logo-2,
+    .social-media {display: initial;}
+  
+  
+    nav {
+      z-index: 9;
+      position: fixed;
+      left: 0;
+      top: 0px;
+      bottom: 0;
+      width: clamp(200px, 70%, 280px);
+      background-color: $pri-col;
+      box-shadow: 0 0 10px rgba(black, .5);
+      padding: 10px;
+      border-right: 1px solid white;
+      transition: .5s linear;
+      border-right: 1px solid #fff;
+      transform: translateX(-280px);
+      overflow: hidden;
+      &.active {
+        transform: translate(0);
+      }
+
+      ul {
+        display: block;
+      }
+
+
+      ul li a {
+        display: block;
+        padding-block: 15px;
+        font-size: 1.8rem;
+        border-bottom: 1px solid $text-grey ;
+        max-width: 100%;
+        color: $real-white !important;
+      }
+  
+      .social-media {
+        width: clamp(60%, 70%, 80% );
+        height: 50px;
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        @include flex(center, space-between, row);
+  
+        a {
+          @include flex(center, center, row);
+          font-size: 2.5rem;
+          color: $pri-col;
+          background-color: $bkc;
+          border-radius: 20px;
+          width: 40px;
+          height: 40px;
+          i {
+            transition: .5s;
+          }
+  
+          &:hover i{
+            transform: scale(1.2);
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  
+    .logo-2 a {
+      font-size: clamp(2rem, 4vh, 3.5rem );
+      color: $real-white;
+      font-family: 'Tangerine', sans-serif;
+      margin-block: 10px;
+      text-align: center;
+    }
+  
+    .overlay {
+      transition: .5s linear;
+      pointer-events: none;
+      z-index: -1;
+      display: none;
+      &.active {
+        position: fixed;
+        inset: 0;
+        background-color: rgba($white, .1);
+        backdrop-filter: blur(4px);  
+        pointer-events: all;
+        z-index: 1;
+        display: block;
+      }
+    }
+  
+    .hamburger {
+      width: 30px;
+      height: 30px;
+      background-color: $pri-col;
+      position: relative;
+      @include flex(center, center, row);
+      border-radius: 5px;
+      overflow: hidden;   
+      border: 1px solid $white; 
+      position: fixed;
+      z-index: 999999;
+      right: 20px;
+      cursor: pointer ;
+      div {
+        width: 85%;
+        height: 85%;
+        position: relative;
+        @include flex(center, center, row);
+  
+        span {
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: $real-white;
+          border-radius: 1.5px;
+          display: block;
+          transition: .5s;
+        }
+  
+        span:nth-child(1) {
+          transform: translate(-6.5px,-10px);
+          width: 50%;
+        }
+        span:nth-child(3) {
+          transform: translate(6.5px,10px);
+          width: 50%;
+        }
+  
+        &.active span:nth-child(2) {
+          transform: translateX(50px);
+        }
+        &.active span:nth-child(1) {
+          transform: translate(0) rotate(-135deg);
+          width: 100%;
+        }
+        &.active span:nth-child(3) {
+          transform: translate(0) rotate(calc(1 * 135deg));
+          width: 100%;
+          // 30% 70% 70% 30% / 30% 30% 70% 70% 
+        }
+  
+  
+      }
+    }
+    &.active .hamburger {
+      background-color: rgba($white, .1);
+      border: none;
+    }
+  }
+  
+  main {
+    #home {
+      grid-template-columns: 1fr;
+      background: $bkc;
+
+      .intro-img{
+        height: clamp(150px, 100%, 250px);
+        @include flex(end, center, null);
+        grid-row: 1/2;
+        img {
+          display: block;
+          width: clamp(150px, 100%, 280px);
+        }
+      }
+  
+      .intro {
+        place-self: start;
+        .social-media {
+          bottom: 0;
+          left: 20px;
+          gap: 5px;
+          transform: translateY(-50%);
+          font-size: 1.5rem;
+
+          @include flex(center, center, column);
+          a span {
+            display: none;
+          }
+
+        }
+        h1 {
+          font-size: 2.3rem;
+          span {
+            font-size: 3.2rem;
+          }
+        }
+
+        h3 {
+          font-size: 1.9rem;
+        }
+
+      }
+      button {
+        width: auto;
+        font-size: 1.2rem;
+        padding: 5px;
+        height: 40px;
+      }
+    }
+
+    #about {
+      .content {
+        @include flex(center, center, column);
+        height: auto ;
+
+        .img-container {
+          width: 100%;
+          height: clamp(150px, 100%, 370px);
+          @include flex(center, center, null);
+          img {
+            // display: none;
+            width: clamp(150px, 100%, 280px);
+            height: 225px;
+          }
+        }
+
+        .text-content {
+          flex: 1;
+          h3 {
+            font-size: 2.3rem;
+          }
+          .work-content {
+            flex-direction: column;
+            height: auto;
+            margin-bottom: 50px;
+
+            .container {
+              width: clamp(150px, 100%, 230px);
+              height: 225px;  
+              margin-top: 50px;
+              span:nth-child(2),p {
+                font-size: 1.6rem;
+              }
+            }
+          }
+
+          button {
+            width: 150px;
+          }
+        }
+      }
+    }
+  }
+}
