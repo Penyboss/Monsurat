@@ -45,7 +45,7 @@ for (const link of navLink) {
 
 
 window.onscroll = function () {
-  if (window.scrollY > 50) {
+  if (window.scrollY > 20) {
     headerEl.classList.add('active');
   } else {
     headerEl.classList.remove('active');

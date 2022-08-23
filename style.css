@@ -135,6 +135,9 @@ main #home {
   padding-inline: 50px;
   position: relative;
 }
+main #home .intro-img img {
+  display: none;
+}
 main #home button {
   width: 180px;
   height: 45px;
@@ -502,6 +505,21 @@ header .social-media {
   }
   main #home {
     grid-template-columns: 1fr;
+    background: #0a0a0f;
+  }
+  main #home .intro-img {
+    border: 1px solid #fff;
+    height: clamp(150px, 100%, 250px);
+    display: flex;
+    align-items: start;
+    justify-content: center;
+  }
+  main #home .intro-img img {
+    display: block;
+    width: clamp(150px, 100%, 280px);
+  }
+  main #home .intro {
+    border: 1px solid #fff;
   }
   main #home .intro .social-media {
     bottom: 0;
