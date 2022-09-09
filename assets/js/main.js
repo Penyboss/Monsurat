@@ -1,53 +1,24 @@
 /**
- * ? /================/HEADER SECTION/============/
+ * * /==================/ HAMBURGER && SIDEBAR /===============/
 **/
-
 const hamburger = document.querySelector('.hamburger');
-const hamburgerDiv = document.querySelector('.hamburger div');
-const navbar = document.querySelector('#navbar');
-const headerEl = document.querySelector('#head');
-const bodyEl = document.querySelector('html');
-const overlay = document.querySelector('.overlay');
-const logo2 = document.querySelector('.logo-2');
-const navLink = document.querySelectorAll('.nav-link');
-const controls = [hamburger, overlay, logo2];
+const overlay = document.querySelector('.over_lay');
+const headerLink = document.querySelectorAll('.nav_link');
+const navbar = document.querySelector('.nav_bar');
+let sideControls = [overlay, hamburger];
 
-controls.forEach(function (param) {
-  param.addEventListener('click', () => {
-    hamburgerDiv.classList.toggle('active');
+sideControls.forEach(sideControl => {
+  sideControl.addEventListener('click', () => {
     navbar.classList.toggle('active');
     overlay.classList.toggle('active');
-
-    if (overlay.classList[1]) {
-      bodyEl.style.overflowY = 'hidden';
-    } else {
-      bodyEl.style.overflowY = '';
-    }
+    hamburger.classList.toggle('active');
   });
 });
 
-for (const link of navLink) {
+headerLink.forEach(link => {
   link.addEventListener('click', () => {
-    hamburgerDiv.classList.remove('active');
     navbar.classList.remove('active');
     overlay.classList.remove('active');
-    bodyEl.style.overflowY = 'auto';
-
+    hamburger.classList.remove('active');
   });
-}
-/**
- * * /==================/TYPED EFFECT/===============/
-**/
-
-/**
- * * /==================/SCROLL EFFECT/===============/
-**/
-
-
-window.onscroll = function () {
-  if (window.scrollY > 20) {
-    headerEl.classList.add('active');
-  } else {
-    headerEl.classList.remove('active');
-  }
-};
+});

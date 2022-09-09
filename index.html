@@ -4,165 +4,340 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#1b74e4" />
 		<title>Monsurat</title>
-		<link
+		<!-- ?/========/ FAVICON /========/ -->
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+		<!-- ?/========/ ICON CDN /========/ -->
+		<!-- <link
 			href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
 			rel="stylesheet"
-		/>
+		/> -->
+		<link rel="stylesheet" href="box/css/boxicons.min.css" />
+		<!-- ?/========/ TYPED JS CDN /========/ -->
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script> -->
+		<script src="typed.min.js"></script>
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-		<script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+		<!-- ?/========/ LORD ICON CDN /========/ -->
+		<!-- <script src="https://cdn.lordicon.com/xdjxvujz.js"></script> -->
+		<script src="xdjxvujz.js"></script>
+
+		<!-- ?/========/ CSS STYLE /========/ -->
 		<link rel="stylesheet" href="assets/css/style.css" />
 	</head>
 	<body>
-		<header id="head">
-			<div class="logo">
-				<h1><a href="#home">Monsurat</a></h1>
-			</div>
+		<!-- ? /========/ HEADER /======/  -->
+		<header class="header">
+			<a href="#home" class="logo">Monsurat</a>
 
-			<nav id="navbar">
-				<h1 class="logo-2"><a href="#home">MONSURAT</a></h1>
-
+			<nav id="nav_bar" class="nav_bar">
 				<ul>
-					<li class="nav-link"><a href="#home">Home</a></li>
-					<li class="nav-link"><a href="#about">About</a></li>
-					<li class="nav-link"><a href="#services">Services</a></li>
-					<li class="nav-link"><a href="#portfolio">Portfolio</a></li>
-					<li class="nav-link"><a href="#skill">Skills</a></li>
-					<li class="nav-link"><a href="#blog">Blog</a></li>
-					<li class="nav-link"><a href="#contact">Contact</a></li>
+					<li><a class="nav_link" href="#home">Home</a></li>
+					<li><a class="nav_link" href="#about">About</a></li>
+					<li><a class="nav_link" href="#portfolio">Portfolio</a></li>
+					<li><a class="nav_link" href="#services">Services</a></li>
+					<li><a class="nav_link" href="#blog">Blog</a></li>
+					<li><a class="nav_link" href="#contact">Contact</a></li>
 				</ul>
 			</nav>
-			<div class="overlay"></div>
 
-			<div class="hamburger" aria-controls="navmenu">
+			<div class="hamburger" aria-controls="nav_bar">
 				<div>
-					<span></span>
-					<span></span>
-					<span></span>
+					<span class="stroke_1"></span>
+					<span class="stroke_2"></span>
+					<span class="stroke_3"></span>
 				</div>
 			</div>
+
+			<div class="over_lay"></div>
 		</header>
 
 		<main>
-			<!-- * /===========/HOME SECTION/==========/ -->
+			<article>
+				<!-- ? /========/ HOME /======/  -->
+				<section class="section home" id="home">
+					<figure class="home_image">
+						<img
+							src="assets/images/home-img.png"
+							alt="Monsurat"
+							loading="eager"
+						/>
+					</figure>
 
-			<section id="home">
-				<div class="intro">
-					<h1>Hi, I'am <span>Monsurat,</span></h1>
+					<div class="home_content">
+						<h2 class="home_title">Hi, I'am <span>Monsurat.</span></h2>
 
-					<h3>A <span id="typed"></span></h3>
+						<h3 class="home_subtile">A <span id="typed"></span></h3>
 
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-						maxime cum atque ut expedita velit maiores quod sunt incidunt
-						eveniet.
-					</p>
-
-					<button type="button">DOWNLOAD CV</button>
-
-					<div class="social-media">
-						<a href="" class="icon">
-							<i class="ri-github-line"></i>
-							<span
-								>Github <br />
-								Username
-							</span>
-						</a>
-						<a href="https://wa.me/+2347040589754" class="icon" target="_blank">
-							<i class="ri-whatsapp-line"></i>
-							<span
-								>Whatsapp <br />
-								+2347040589754
-							</span>
-						</a>
-						<a href="mailto:abdulqudusadiq@gmail.com" class="icon">
-							<i class="ri-mail-line"></i>
-							<span
-								>Gmail <br />
-								abdulqudusadiq@gmail.com
-							</span>
-						</a>
-					</div>
-				</div>
-				<div class="intro-img">
-					<img src="assets/images/home-img.png" alt="" />
-				</div>
-			</section>
-			<!-- * /==========/ABOUT SECTION/========/ -->
-
-			<section id="about">
-				<div class="my-intro">
-					<div class="intro">
-						<h3>My Intro</h3>
-
-						<h2>About Me</h2>
-					</div>
-				</div>
-
-				<div class="content">
-					<div class="img-container">
-						<img src="assets/images/about-img.jpg" alt="" />
-					</div>
-
-					<div class="text-content">
-						<h3>Hi, I'm <span>Ayinde Monsurat,</span> Based in Nigeria.</h3>
-
-						<p class="about-me-paragraph">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam
-							ullam officia libero sed eligendi dolorem. Alias sequi
-							exercitationem minus blanditiis animi corrupti asperiores, ducimus
-							libero voluptatibus praesentium voluptates quis numquam!
+						<p class="home_intro">
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum
+							corporis vel voluptatibus repudiandae aperiam ipsa asperiores quis
+							eaque, quidem quae ipsam necessitatibus? Possimus maiores aliquam
+							laudantium assumenda facilis animi numquam.
 						</p>
 
-						<div class="work-content">
-							<div class="container">
-								<lord-icon
-									src="https://cdn.lordicon.com/nkmsrxys.json"
-									trigger="loop"
-									colors="primary:#a4a7ab,secondary:#1b74e4"
-									style="width: 250px; height: 250px"
-								>
-								</lord-icon>
-								<span>Experience</span>
+						<button class="button">
+							Download CV <i class="bx bx-cloud-download button_icon"></i>
+						</button>
+					</div>
+				</section>
 
-								<p><span class="number">8</span> + Years</p>
-							</div>
+				<!-- ? /========/ ABOUT /======/  -->
+				<section class="section" id="about">
+					<h1 class="section_title" data-heading="My Intro">About Me</h1>
 
-							<div class="container">
-								<lord-icon
-									src="https://cdn.lordicon.com/fhtaantg.json"
-									trigger="loop"
-									colors="primary:#a4a7ab,secondary:#1b74e4"
-									style="width: 250px; height: 250px"
-								>
-								</lord-icon>
-								<span>Complete</span>
+					<div class="about_container">
+						<figure class="about_image">
+							<img
+								src="assets/images/about-img.jpg"
+								alt="Monsurat About image"
+								loading="eager"
+							/>
+						</figure>
 
-								<p><span class="number">70</span> + Projects</p>
-							</div>
+						<div class="about_info">
+							<h3 class="about_title">
+								Hi, I'm <span>Ayinde Monsurat.</span><br />
+								A Data Analyst Based in Nigeria.
+							</h3>
 
-							<div class="container">
-								<lord-icon
-									src="https://cdn.lordicon.com/hciqteio.json"
-									trigger="loop"
-									colors="primary:#a4a7ab,secondary:#1b74e4"
-									style="width: 250px; height: 250px"
-								>
-								</lord-icon>
-								<span>Support</span>
+							<p class="about_text">
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta
+								expedita hic voluptates omnis laboriosam quidem deserunt neque!
+							</p>
 
-								<p>Online 24/7</p>
+							<ul class="about_details">
+								<li class="about_lists">
+									<i class="bx bx-chevron-right"></i> &nbsp;<span>Age:</span> 25
+								</li>
+								<li class="about_lists">
+									<i class="bx bx-chevron-right"></i> &nbsp;<span
+										>Birthday:</span
+									>
+									1 January, 2022.
+								</li>
+								<li class="about_lists">
+									<i class="bx bx-chevron-right"></i>
+									&nbsp;<span>phone:</span>+234 708 787 9239
+								</li>
+								<li class="about_lists">
+									<i class="bx bx-chevron-right"></i> &nbsp;<span>Email:</span>
+									horlarbycee@gmail.com
+								</li>
+								<li class="about_lists">
+									<i class="bx bx-chevron-right"></i> &nbsp;<span>City:</span>
+									Ibadan
+								</li>
+								<li class="about_lists">
+									<i class="bx bx-chevron-right"></i> &nbsp;<span>Degree:</span>
+									Master
+								</li>
+								<li class="about_lists">
+									<i class="bx bx-chevron-right"></i> &nbsp;<span
+										>Website:</span
+									>
+									www.myblog.com
+								</li>
+								<li class="about_lists">
+									<i class="bx bx-chevron-right"></i> &nbsp;<span
+										>Freelancing:</span
+									>
+									Avaliable 24/7/365.
+								</li>
+							</ul>
+
+							<p class="about_text">
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo,
+								molestiae veniam consequatur aliquam nostrum aliquid debitis
+								quis animi ipsum odio sit in aperiam commodi velit molestias
+								unde, expedita voluptatem cupiditate?
+							</p>
+
+							<div class="accomplishments_container">
+								<div class="accomplishmemt">
+									<span class="accomplishment_icon">
+										<!-- <lord-icon
+											src="https://cdn.lordicon.com/nkmsrxys.json"
+											trigger="loop"
+											colors="primary:#a4a7ab,secondary:#1b74e4"
+											style="width: 250px; height: 250px"
+										>
+										</lord-icon> -->
+										<lord-icon
+											src="nkmsrxys.json"
+											trigger="loop"
+											colors="primary:#a4a7ab,secondary:#1b74e4"
+											style="width: 250px; height: 250px"
+										>
+										</lord-icon>
+									</span>
+
+									<h3 class="accomplishent_title">Experience</h3>
+									<p class="accomplishment_subtitle">+8 years</p>
+								</div>
+
+								<div class="accomplishmemt">
+									<span class="accomplishment_icon">
+										<!-- <lord-icon
+											src="https://cdn.lordicon.com/fhtaantg.json"
+											trigger="loop"
+											colors="primary:#a4a7ab,secondary:#1b74e4"
+											style="width: 250px; height: 250px"
+										>
+										</lord-icon> -->
+										<lord-icon
+											src="fhtaantg.json"
+											trigger="loop"
+											colors="primary:#a4a7ab,secondary:#1b74e4"
+											style="width: 250px; height: 250px"
+										>
+										</lord-icon>
+									</span>
+
+									<h3 class="accomplishent_title">Completed</h3>
+									<p class="accomplishment_subtitle">+70 Projects</p>
+								</div>
+
+								<div class="accomplishmemt">
+									<span class="accomplishment_icon">
+										<!-- <lord-icon
+											src="https://cdn.lordicon.com/nkmsrxys.json"
+											trigger="loop"
+											colors="primary:#a4a7ab,secondary:#1b74e4"
+											style="width: 250px; height: 250px"
+										>
+										</lord-icon> -->
+										<lord-icon
+											src="hciqteio.json"
+											trigger="loop"
+											colors="primary:#a4a7ab,secondary:#1b74e4"
+											style="width: 250px; height: 250px"
+										>
+										</lord-icon>
+									</span>
+
+									<h3 class="accomplishent_title">Support</h3>
+									<p class="accomplishment_subtitle">24/7/365</p>
+								</div>
+
+								<div class="accomplishmemt">
+									<span class="accomplishment_icon">
+										<i class="bx bx-smile"></i>
+										<!-- <lord-icon
+											src="https://cdn.lordicon.com/nkmsrxys.json"
+											trigger="loop"
+											colors="primary:#a4a7ab,secondary:#1b74e4"
+											style="width: 250px; height: 250px"
+										>
+										</lord-icon> -->
+									</span>
+
+									<h3 class="accomplishent_title">Client</h3>
+									<p class="accomplishment_subtitle">+500</p>
+								</div>
 							</div>
 						</div>
-
-						<button type="button">DOWNLOAD CV</button>
 					</div>
-				</div>
-			</section>
-			<section></section>
-			<section></section>
-			<section id="contact"></section>
+
+					<!-- ? /========/ skills /======/  -->
+					<div class="skill_container">
+						<h1 class="section_title" data-heading="What I Know">Skills</h1>
+						<div class="skills">
+							<div class="skill">
+								<span class="skill_icon">
+									<i class="bx bxl-html5"></i>
+								</span>
+
+								<div class="skill_progressbar_details">
+									<h3 class="skill_name">HTML</h3>
+									<span class="skill_percentage">90%</span>
+								</div>
+
+								<div class="progress_bar">
+									<span class="progress" style="width: 90%"></span>
+								</div>
+							</div>
+
+							<div class="skill">
+								<span class="skill_icon">
+									<i class="bx bxl-css3"></i>
+								</span>
+
+								<div class="skill_progressbar_details">
+									<h3 class="skill_name">CSS</h3>
+									<span class="skill_percentage">70%</span>
+								</div>
+
+								<div class="progress_bar">
+									<span class="progress" style="width: 70%"></span>
+								</div>
+							</div>
+
+							<div class="skill">
+								<span class="skill_icon">
+									<i class="bx bxl-react"></i>
+								</span>
+
+								<div class="skill_progressbar_details">
+									<h3 class="skill_name">React</h3>
+									<span class="skill_percentage">50%</span>
+								</div>
+
+								<div class="progress_bar">
+									<span class="progress" style="width: 50%"></span>
+								</div>
+							</div>
+
+							<div class="skill">
+								<span class="skill_icon">
+									<i class="bx bxl-vuejs"></i>
+								</span>
+
+								<div class="skill_progressbar_details">
+									<h3 class="skill_name">Vue Js</h3>
+									<span class="skill_percentage">60%</span>
+								</div>
+
+								<div class="progress_bar">
+									<span class="progress" style="width: 60%"></span>
+								</div>
+							</div>
+
+							<div class="skill">
+								<span class="skill_icon">
+									<i class="bx bxl-javascript"></i>
+								</span>
+
+								<div class="skill_progressbar_details">
+									<h3 class="skill_name">Javascript</h3>
+									<span class="skill_percentage">75%</span>
+								</div>
+
+								<div class="progress_bar">
+									<span class="progress" style="width: 75%"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- ? /========/ PORTFOLIO /======/  -->
+				<section class="section" id="portfolio">
+					<h1 class="section_title" data-heading="Jobs Done">Portfolio</h1>
+
+					<div class="portfolio_container">
+						<h1 class="portfolio_status">Coming Soon</h1>
+					</div>
+				</section>
+				<!-- ? /========/ SERVICES /======/  -->
+				<section class="section" id="services">
+					<h1 class="section_title" data-heading="What I Offer">Services</h1>
+				</section>
+				<!-- ? /========/ BLOG /======/  -->
+
+				<!-- ? /========/ CONTACT /======/  -->
+			</article>
 		</main>
 		<script src="assets/js/main.js"></script>
 		<script>
