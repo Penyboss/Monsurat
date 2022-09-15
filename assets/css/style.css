@@ -27,7 +27,7 @@ body.dark_theme {
   --bck-color: #070606;
   --color: #d6d6dc;
   --title-color: #fff;
-  --big-box-color: #202020;
+  --big-box-color: #191c27;
   --box-color: #16161d;
   --bd-color: #383838;
   --shadow-2: 0 16px 30px #00000040;
@@ -234,13 +234,13 @@ textarea {
   flex-direction: column;
   display: flex;
   justify-content: center;
-  gap: 35px;
+  gap: 2.5px;
   height: 100vh;
 }
 .header .nav_bar .nav_link {
   color: var(--title-color);
   font-family: klee one, sans-serif;
-  font-size: var(--h3-font-size);
+  font-size: 2rem;
   position: relative;
 }
 .header .nav_bar .nav_link::after {
