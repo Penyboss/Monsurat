@@ -1016,7 +1016,7 @@ textarea {
   }
   .home {
     align-items: center;
-    background: url("../images/home-bg.jpg") no-repeat center right /cover;
+    background: url("../images/home-bg.jpg") no-repeat right center  /cover;
     display: grid;
     justify-content: start;
     padding: 0 40px;
