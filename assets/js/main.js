@@ -47,11 +47,11 @@ window.addEventListener('scroll', () => {
   const toTop = document.querySelector('.to_top');
   if (window.scrollY > 20) {
     header.classList.add('active');
-    headerTheme.setAttribute('content', 'var(--pri-color)');
+    headerTheme.setAttribute('content', '#1f51ff');
     toTop.classList.add('active');
   } else {
     header.classList.remove('active');
-    headerTheme.setAttribute('content', 'var(--bck-color)');
+    headerTheme.setAttribute('content', '#070606');
     toTop.classList.remove('active');
   }
 
