@@ -24,10 +24,10 @@ lord-icon {
 }
 
 body.dark_theme {
-  --bck-color: #070606;
+  --bck-color: #2d2d2d;
   --color: #d6d6dc;
   --title-color: #fff;
-  --big-box-color: #2d2d2d;
+  --big-box-color: #070606;
   --box-color: #16161d;
   --bd-color: #383838;
   --shadow-2: 0 16px 30px #00000040;
