@@ -24,7 +24,7 @@ lord-icon {
 }
 
 body.dark_theme {
-  --bck-color: #000;
+  --bck-color: #070606;
   --color: #d6d6dc;
   --title-color: #fff;
   --big-box-color: #1e1e1f;
@@ -946,7 +946,7 @@ textarea {
 }
 @media (min-width: 550px) {
   article {
-    max-width: 550px;
+    max-width: 95%;
     margin-inline: auto;
   }
   .home_title span {
