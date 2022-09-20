@@ -35,12 +35,12 @@ body.dark_theme {
 }
 
 ::-moz-selection {
-  background: rgb(50, 173, 163);
+  background: var(--pri-color);
   color: #fff;
 }
 
 ::selection {
-  background: rgb(50, 173, 163);
+  background: var(--pri-color);
   color: #fff;
 }
 
