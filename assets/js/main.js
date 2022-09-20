@@ -75,13 +75,11 @@ window.addEventListener('scroll', () => {
 
 });
 
-/**
- * *  /==================/ Type Animation /===============/
-**/
 
 /**
  * *  /==================/ Scroll Reveal Animation /===============/
 **/
+
 const sr = ScrollReveal({
   origin: 'bottom',
   distance: '60px',
@@ -91,4 +89,4 @@ const sr = ScrollReveal({
 });
 
 sr.reveal(' .home_content, .about_image, .about_details, .accomplishments_container, .skills, .testimonials_container', {});
-sr.reveal(' .home_subtile, .home_title, .home_intro, .button , .about_title, .about_text, .accomplishment, .skill, .portfolio, .blog, .social_link_container, .input_container, .home_social_link, .about_service ,.about_lists   ', { interval: 200 }); 
+sr.reveal(' .home_subtile, .home_title, .home_intro, .button , .about_title, .about_text, .accomplishment, .skill, .portfolio, .blog, .social_link_container, .input_container, .home_social_link, .about_service ,.about_lists, .service', { interval: 200 }); 
